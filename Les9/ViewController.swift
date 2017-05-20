@@ -9,6 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
+    @IBOutlet weak var emailField: UITextField!
+    
+    
+    @IBOutlet weak var passwordField: UITextField!
+    
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +32,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
+    @IBAction func signTapped(_ sender: Any) {
+    }
+    
+    
+    
+    
 
 }
 
@@ -27,4 +47,4 @@ class ViewController: UIViewController {
 
 
 
-//1st create labels
+//1st create labels, connect to code 
