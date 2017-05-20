@@ -23,3 +23,8 @@ class ViewController: UIViewController {
 
 }
 
+
+
+
+
+//1st create labels
