@@ -8,6 +8,8 @@ target 'Les9' do
   # Pods for Les9
 
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
 
 end

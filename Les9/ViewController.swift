@@ -27,12 +27,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
 
-    
     
     @IBAction func signTapped(_ sender: Any) {
     }
@@ -47,4 +43,8 @@ class ViewController: UIViewController {
 
 
 
-//1st create labels, connect to code 
+//1st create labels, connect to code
+/*2nd add pod 'Firebase/Core/Auth'
+pod 'Firebase/Core/Database'
+pod 'Firebase/Core/Storage'
+ */
