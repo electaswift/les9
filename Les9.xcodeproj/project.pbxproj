@@ -12,9 +12,13 @@
 		93CAD5D31ED0F4810046C533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CAD5D11ED0F4810046C533 /* Main.storyboard */; };
 		93CAD5D51ED0F4810046C533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93CAD5D41ED0F4810046C533 /* Assets.xcassets */; };
 		93CAD5D81ED0F4820046C533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CAD5D61ED0F4820046C533 /* LaunchScreen.storyboard */; };
+		93CAD5E01ED0F7D40046C533 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93CAD5DF1ED0F7D40046C533 /* GoogleService-Info.plist */; };
+		CD2D8415414937F08C508630 /* Pods_Les9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FE9E664D40CEF345B51EF7 /* Pods_Les9.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41E118F3C5E4ADC705EF9D88 /* Pods-Les9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Les9.release.xcconfig"; path = "Pods/Target Support Files/Pods-Les9/Pods-Les9.release.xcconfig"; sourceTree = "<group>"; };
+		56FE9E664D40CEF345B51EF7 /* Pods_Les9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Les9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CAD5CA1ED0F4810046C533 /* Les9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Les9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CAD5CD1ED0F4810046C533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93CAD5CF1ED0F4810046C533 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		93CAD5D41ED0F4810046C533 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93CAD5D71ED0F4820046C533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93CAD5D91ED0F4820046C533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93CAD5DF1ED0F7D40046C533 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A508F8A32B08F5F467A3DC70 /* Pods-Les9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Les9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Les9/Pods-Les9.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2D8415414937F08C508630 /* Pods_Les9.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16DE6ACBD487DC5C41EA3821 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A508F8A32B08F5F467A3DC70 /* Pods-Les9.debug.xcconfig */,
+				41E118F3C5E4ADC705EF9D88 /* Pods-Les9.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		93CAD5C11ED0F4810046C533 = {
 			isa = PBXGroup;
 			children = (
 				93CAD5CC1ED0F4810046C533 /* Les9 */,
 				93CAD5CB1ED0F4810046C533 /* Products */,
+				16DE6ACBD487DC5C41EA3821 /* Pods */,
+				B879EE31E4744380BC19AF56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,9 +77,18 @@
 				93CAD5D11ED0F4810046C533 /* Main.storyboard */,
 				93CAD5D41ED0F4810046C533 /* Assets.xcassets */,
 				93CAD5D61ED0F4820046C533 /* LaunchScreen.storyboard */,
+				93CAD5DF1ED0F7D40046C533 /* GoogleService-Info.plist */,
 				93CAD5D91ED0F4820046C533 /* Info.plist */,
 			);
 			path = Les9;
+			sourceTree = "<group>";
+		};
+		B879EE31E4744380BC19AF56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56FE9E664D40CEF345B51EF7 /* Pods_Les9.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93CAD5DC1ED0F4820046C533 /* Build configuration list for PBXNativeTarget "Les9" */;
 			buildPhases = (
+				5CDD3C434D71D8891B1ED865 /* [CP] Check Pods Manifest.lock */,
 				93CAD5C61ED0F4810046C533 /* Sources */,
 				93CAD5C71ED0F4810046C533 /* Frameworks */,
 				93CAD5C81ED0F4810046C533 /* Resources */,
+				B506C2E0FF7537015AE5ADF1 /* [CP] Embed Pods Frameworks */,
+				D51C52EE4E96D5961B1C0A24 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CAD5D81ED0F4820046C533 /* LaunchScreen.storyboard in Resources */,
+				93CAD5E01ED0F7D40046C533 /* GoogleService-Info.plist in Resources */,
 				93CAD5D51ED0F4810046C533 /* Assets.xcassets in Resources */,
 				93CAD5D31ED0F4810046C533 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CDD3C434D71D8891B1ED865 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B506C2E0FF7537015AE5ADF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Les9/Pods-Les9-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D51C52EE4E96D5961B1C0A24 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Les9/Pods-Les9-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93CAD5C61ED0F4810046C533 /* Sources */ = {
@@ -260,6 +339,7 @@
 		};
 		93CAD5DD1ED0F4820046C533 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A508F8A32B08F5F467A3DC70 /* Pods-Les9.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Les9/Info.plist;
@@ -272,6 +352,7 @@
 		};
 		93CAD5DE1ED0F4820046C533 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E118F3C5E4ADC705EF9D88 /* Pods-Les9.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Les9/Info.plist;
