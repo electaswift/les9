@@ -79,6 +79,12 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
  //6th create new view controller. embed in navigation controller. 
  //7th create segue from signIn vc to navigation controller. yellow circle drag. name the segue. make sure its present modally. 
+ //9th add bar button item to 2nd vc bar. 
+ //10th create code vc for 2nd vc. new file cocoa touch . yellow circle change class to SnapsViewController
+ //11th connect log out bar button to code vc as action. 
+ //12th add add button. connect to 3rd vc. add navigation item to 3rd vc. add camera. 
+ //13th add image view to 3rd vc
+ //14th add 3rd vc code version
  
  
  

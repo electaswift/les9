@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="353" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Snaps View Controller-->
         <scene sceneID="a72-PJ-PJX">
             <objects>
-                <viewController id="5LL-ej-AqD" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5LL-ej-AqD" customClass="SnapsViewController" customModule="Les9" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bqv-if-NuZ"/>
                         <viewControllerLayoutGuide type="bottom" id="SEm-QR-qav"/>
@@ -91,11 +91,87 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="R6u-Kv-oMM"/>
+                    <navigationItem key="navigationItem" id="R6u-Kv-oMM">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="H1q-gl-qfE">
+                            <connections>
+                                <action selector="logOutTapped:" destination="5LL-ej-AqD" id="vqI-xm-qyN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xEg-Pk-ezI">
+                            <connections>
+                                <segue destination="0Q4-se-bR7" kind="show" identifier="addTapped" id="bro-Fy-hms"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmD-0k-jzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2144.8000000000002" y="130.88455772113943"/>
+        </scene>
+        <!--Add Snap View Controller-->
+        <scene sceneID="cax-3M-FSo">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0Q4-se-bR7" customClass="AddSnapViewController" customModule="Les9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gpe-VN-fgk"/>
+                        <viewControllerLayoutGuide type="bottom" id="SSp-xO-9fw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W2N-26-tdk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5F-eb-j0b">
+                                <rect key="frame" x="67" y="84" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="j6m-Qj-egl"/>
+                                    <constraint firstAttribute="height" constant="128" id="wY3-l8-Ari"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoV-en-MUg">
+                                <rect key="frame" x="67.5" y="275" width="240" height="22"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfH-GF-I27">
+                                <rect key="frame" x="162" y="347" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="LmR-bz-Nhx"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="0Q4-se-bR7" eventType="touchUpInside" id="lXe-Wb-EXV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vfH-GF-I27" firstAttribute="top" secondItem="yoV-en-MUg" secondAttribute="bottom" constant="50" id="143-Dc-6sz"/>
+                            <constraint firstItem="vfH-GF-I27" firstAttribute="centerX" secondItem="W2N-26-tdk" secondAttribute="centerX" id="2xl-Q5-jBz"/>
+                            <constraint firstItem="yoV-en-MUg" firstAttribute="top" secondItem="X5F-eb-j0b" secondAttribute="bottom" constant="63" id="Yfx-Il-myr"/>
+                            <constraint firstItem="yoV-en-MUg" firstAttribute="centerX" secondItem="W2N-26-tdk" secondAttribute="centerX" id="bDQ-4J-L3G"/>
+                            <constraint firstItem="yoV-en-MUg" firstAttribute="width" secondItem="X5F-eb-j0b" secondAttribute="width" id="bx9-4d-tMS"/>
+                            <constraint firstItem="X5F-eb-j0b" firstAttribute="centerX" secondItem="W2N-26-tdk" secondAttribute="centerX" id="dof-ld-vHw"/>
+                            <constraint firstItem="yoV-en-MUg" firstAttribute="centerX" secondItem="X5F-eb-j0b" secondAttribute="centerX" id="q62-BA-Smo"/>
+                            <constraint firstItem="X5F-eb-j0b" firstAttribute="top" secondItem="Gpe-VN-fgk" secondAttribute="bottom" constant="20" id="rpc-hW-Psd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hu4-FN-WZS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="iMs-no-Ovg">
+                            <connections>
+                                <action selector="cameraTapped:" destination="0Q4-se-bR7" id="zCM-sR-VE9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionField" destination="yoV-en-MUg" id="hCU-bo-h6E"/>
+                        <outlet property="imageView" destination="X5F-eb-j0b" id="W6R-Ln-Vdz"/>
+                        <outlet property="nextButton" destination="vfH-GF-I27" id="pJW-EH-Hgv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0TU-fR-Xxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2976" y="149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d5R-eO-hrL">
