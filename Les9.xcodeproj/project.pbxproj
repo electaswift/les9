@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9315A5F91ED1868800B181A5 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315A5F81ED1868800B181A5 /* SnapsViewController.swift */; };
 		9315A5FB1ED19BB700B181A5 /* AddSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315A5FA1ED19BB700B181A5 /* AddSnapViewController.swift */; };
+		9315A5FD1ED1F55600B181A5 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315A5FC1ED1F55600B181A5 /* SelectUserViewController.swift */; };
 		93CAD5CE1ED0F4810046C533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAD5CD1ED0F4810046C533 /* AppDelegate.swift */; };
 		93CAD5D01ED0F4810046C533 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAD5CF1ED0F4810046C533 /* ViewController.swift */; };
 		93CAD5D31ED0F4810046C533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CAD5D11ED0F4810046C533 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		56FE9E664D40CEF345B51EF7 /* Pods_Les9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Les9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9315A5F81ED1868800B181A5 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		9315A5FA1ED19BB700B181A5 /* AddSnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSnapViewController.swift; sourceTree = "<group>"; };
+		9315A5FC1ED1F55600B181A5 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		93CAD5CA1ED0F4810046C533 /* Les9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Les9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CAD5CD1ED0F4810046C533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93CAD5CF1ED0F4810046C533 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				93CAD5CF1ED0F4810046C533 /* ViewController.swift */,
 				9315A5F81ED1868800B181A5 /* SnapsViewController.swift */,
 				9315A5FA1ED19BB700B181A5 /* AddSnapViewController.swift */,
+				9315A5FC1ED1F55600B181A5 /* SelectUserViewController.swift */,
 				93CAD5D41ED0F4810046C533 /* Assets.xcassets */,
 				93CAD5D61ED0F4820046C533 /* LaunchScreen.storyboard */,
 				93CAD5DF1ED0F7D40046C533 /* GoogleService-Info.plist */,
@@ -223,6 +226,7 @@
 			files = (
 				9315A5FB1ED19BB700B181A5 /* AddSnapViewController.swift in Sources */,
 				93CAD5D01ED0F4810046C533 /* ViewController.swift in Sources */,
+				9315A5FD1ED1F55600B181A5 /* SelectUserViewController.swift in Sources */,
 				93CAD5CE1ED0F4810046C533 /* AppDelegate.swift in Sources */,
 				9315A5F91ED1868800B181A5 /* SnapsViewController.swift in Sources */,
 			);

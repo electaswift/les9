@@ -86,6 +86,11 @@ pod 'Firebase/Storage'
  //13th add image view to 3rd vc
  //14th add 3rd vc code version
  
+ //29th add 4th vc
+ //31st on firebase, go to storage and add folder. might have to upload a bs image first cause shits buggy and wont let you create a folder w/o it 
+ 
+ //38th add table view to 4th vc. create code version. connect class. 
+ 
  
  
  

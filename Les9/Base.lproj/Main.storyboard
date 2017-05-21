@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -120,8 +121,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5F-eb-j0b">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5F-eb-j0b">
                                 <rect key="frame" x="67" y="84" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.82166855569948183" green="0.82166855569948183" blue="0.82166855569948183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="j6m-Qj-egl"/>
                                     <constraint firstAttribute="height" constant="128" id="wY3-l8-Ari"/>
@@ -167,11 +169,45 @@
                         <outlet property="descriptionField" destination="yoV-en-MUg" id="hCU-bo-h6E"/>
                         <outlet property="imageView" destination="X5F-eb-j0b" id="W6R-Ln-Vdz"/>
                         <outlet property="nextButton" destination="vfH-GF-I27" id="pJW-EH-Hgv"/>
+                        <segue destination="dZa-df-Yf5" kind="show" identifier="selectUserSegue" id="EJK-I0-FpG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TU-fR-Xxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2976" y="149"/>
+        </scene>
+        <!--Select User View Controller-->
+        <scene sceneID="ggf-ty-6sJ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dZa-df-Yf5" customClass="SelectUserViewController" customModule="Les9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RwX-Wv-6RT"/>
+                        <viewControllerLayoutGuide type="bottom" id="kbg-eG-9bc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yvD-9D-lhl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ALF-Jo-fi4">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kbg-eG-9bc" firstAttribute="top" secondItem="ALF-Jo-fi4" secondAttribute="bottom" id="FNy-YP-8Vp"/>
+                            <constraint firstItem="ALF-Jo-fi4" firstAttribute="leading" secondItem="yvD-9D-lhl" secondAttribute="leadingMargin" id="QGV-gY-u47"/>
+                            <constraint firstItem="ALF-Jo-fi4" firstAttribute="top" secondItem="RwX-Wv-6RT" secondAttribute="bottom" id="X93-3I-FaK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ALF-Jo-fi4" secondAttribute="trailing" id="pqH-Lk-f9b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ALF-Jo-fi4" id="Zxy-bp-IML"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LeZ-kk-a6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3792" y="145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d5R-eO-hrL">
