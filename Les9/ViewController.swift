@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase   //3rd
+import FirebaseAuth  //4th
 
 class ViewController: UIViewController {
     
@@ -30,7 +32,35 @@ class ViewController: UIViewController {
   
 
     
-    @IBAction func signTapped(_ sender: Any) {
+    @IBAction func signTapped(_ sender: Any) { //5th
+        
+   Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (User, error) in                      //last part completion is a kind of "func" with user/error as the parameters.  Auth is class. auth() is the func that returns the objects. signIn is the method within the class. i think..
+    if error != nil {
+        print("\(error!)")
+        
+        Auth.auth().createUser(withEmail: self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) in
+            if error != nil {
+                print("\(error!)")
+            } else {
+                print("Created User Account")
+                self.performSegue(withIdentifier: "signInSegue", sender: nil)    //8th
+                
+                
+                
+            }
+        })
+        
+        
+        
+    } else {
+        print("Signed In!")
+         self.performSegue(withIdentifier: "signInSegue", sender: nil)   //8th
+    }
+        }
+
+        
+        
+        
     }
     
     
@@ -44,7 +74,14 @@ class ViewController: UIViewController {
 
 
 //1st create labels, connect to code
-/*2nd add pod 'Firebase/Core/Auth'
-pod 'Firebase/Core/Database'
-pod 'Firebase/Core/Storage'
+/*2nd add pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+ //6th create new view controller. embed in navigation controller. 
+ //7th create segue from signIn vc to navigation controller. yellow circle drag. name the segue. make sure its present modally. 
+ 
+ 
+ 
+ 
+ 
  */
