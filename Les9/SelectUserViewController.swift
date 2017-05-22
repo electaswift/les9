@@ -29,7 +29,13 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         Database.database().reference().observe(DataEventType.childAdded, with: {(snapshot) in
             print(snapshot)     //55
             
+            let user = User()
+            user.email = (snapshot.value as! NSDictionary)["email"] as! String
+            user.uid = snapshot.key
             
+            self.users.append(user)
+            
+            self.tableView.reloadData()
             
             
         })

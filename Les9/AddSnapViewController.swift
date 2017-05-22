@@ -72,7 +72,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let imagesFolder = Storage.storage().reference().child("images")    //33rd
         
-        let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!                    //35th  UIImagePNGRepresentation(imageView.image!)
+        let imageData = UIImageJPEGRepresentation((imageView.image!), 0.1)!                    //35th  UIImagePNGRepresentation(imageView.image!)
         
        
         
