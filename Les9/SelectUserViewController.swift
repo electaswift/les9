@@ -14,27 +14,34 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet weak var tableView: UITableView!   //39th
     
+    var users : [User] = [] //48
     
     
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tableView.dataSource = self   //41
         self.tableView.delegate = self      //42
         
     }
-
-
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //43
-        
+        return users.count  //49
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {   //44
         
+        let cell = UITableViewCell()  //50
+        
+        return cell
+        
+        
+        
+          // around 2:35 of pulling data 
     }
-    
+    }
+        
 
-}

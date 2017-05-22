@@ -9,6 +9,7 @@
 import UIKit
 import Firebase   //3rd
 import FirebaseAuth  //4th
+import FirebaseDatabase //45
 
 class ViewController: UIViewController {
     
@@ -43,6 +44,10 @@ class ViewController: UIViewController {
                 print("\(error!)")
             } else {
                 print("Created User Account")
+                
+                let users = Database.database().reference().child("users").child((user?.uid)!).child("email").setValue(user?.email)   //46th
+
+                
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)    //8th
                 
                 
