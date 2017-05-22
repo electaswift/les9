@@ -26,22 +26,25 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //43
         return users.count  //49
-
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {   //44
         
+
         let cell = UITableViewCell()  //50
         
-        return cell
+        let user = users[indexPath.row]  //51
+        
+        cell.textLabel?.text = user.email  //52
         
         
-        
-          // around 2:35 of pulling data 
+        return cell  //52
     }
-    }
+    
+    
+}
         
 
