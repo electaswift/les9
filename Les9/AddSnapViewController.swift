@@ -33,19 +33,31 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imagePicker.delegate = self     //21st
         
+        nextButton.isEnabled = false   //92nd
+        
         // Do any additional setup after loading the view.
         
         
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {   //25th
+        
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         imageView.image = image
         
         imageView.backgroundColor = UIColor.clear        //28th
         
+        nextButton.isEnabled = true
+        
         imagePicker.dismiss(animated: true, completion: nil)  //27th
+        
+       /* if imageView.image == nil {    //93
+            nextButton.isEnabled = false
+        } else {
+            nextButton.isEnabled = true
+        }
+ */
     }
     
     
@@ -64,9 +76,11 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
-    
+
     
     @IBAction func nextTapped(_ sender: Any) {  //18th
+        
+        
         
         nextButton.isEnabled = false // 36th
         

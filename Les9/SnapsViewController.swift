@@ -65,19 +65,33 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {  //66
-        return snaps.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {  //66, 90
+        if snaps.count == 0 {
+            return 1
+        } else {
+            
+            return snaps.count
+        }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {   //67      //68 is to create the viewing snap vc on storyboard. add label/ image view
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {   //67      //68 is to create the viewing snap vc on storyboard. add label/ image view, 91
+        
+        
         let cell = UITableViewCell()
         
-        let snap = snaps[indexPath.row]
-        
-        cell.textLabel?.text = snap.from
-        
+        if snaps.count != 0 {
+            
+            let snap = snaps[indexPath.row]
+            
+            cell.textLabel?.text = snap.from
+            
+            
+        }   else if snaps.count == 0 {
+            cell.textLabel?.text = "You have no Snaps 😫"
+        }
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {  //73rd. 74 is to name the segue.
         let snap = snaps[indexPath.row]
