@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Firebase //32nd
-import FirebaseStorage
+import Firebase //32
+import FirebaseStorage  //32
 
 class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate,   UINavigationControllerDelegate { //2nd
     

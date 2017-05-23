@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase   //3rd
+import Firebase //3rd
 import FirebaseAuth  //4th
 import FirebaseDatabase //45
 
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     
     @IBAction func signTapped(_ sender: Any) { //5th
         
-   Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (User, error) in                      //last part completion is a kind of "func" with user/error as the parameters.  Auth is class. auth() is the func that returns the objects. signIn is the method within the class. i think..
+   Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in                      //last part completion is a kind of "func" with user/error as the parameters.  Auth is class. auth() is the func that returns the objects. signIn is the method within the class. i think..
     if error != nil {
         print("\(error!)")
         
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             } else {
                 print("Created User Account")
                 
-                let users = Database.database().reference().child("users").child((user?.uid)!).child("email").setValue(user?.email)   //46th
+                Database.database().reference().child("users").child((user!.uid)).child("email").setValue(user!.email!)   //46th
 
                 
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)    //8th
