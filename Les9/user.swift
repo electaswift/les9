@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User {
+class User {         //47
     var email = ""
     var uid = ""
 }
