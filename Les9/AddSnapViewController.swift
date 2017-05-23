@@ -86,7 +86,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 print(metadata?.downloadURL())    //37th
                 
-                self.performSegue(withIdentifier: "selectUserSegue", sender: nil)    //30th
+                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()!.absoluteString)    //30th   //59 add sender from nil to metadata. turns URL into string absolute.
             }
             
         }
@@ -96,6 +96,9 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {    //32nd
         
+        let nextVC = segue.destination as! SelectUserViewController   //58
+        nextVC.imageURL = sender as! String   //60
+        nextVC.descrip = descriptionField.text!
         
     }
     

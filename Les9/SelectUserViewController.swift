@@ -9,6 +9,7 @@
 import UIKit
 import Firebase //53
 import FirebaseDatabase //54
+import FirebaseAuth
 
 
 
@@ -19,6 +20,9 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!   //39th
     
     var users : [User] = [] //48
+    
+    var imageURL = ""   //56
+    var descrip = ""   //57
     
     
     
@@ -76,7 +80,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {    //53
          let user = users[indexPath.row]  //54
         
-        let snap = ["from":user.email, "description":"hello", "imageURL":"www.image.com"]
+        let snap = ["from":Auth.auth().currentUser?.email!, "description":descrip, "imageURL":imageURL]               //went from 54 but changed bs descriptions to 61
         
         Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)                //55
     }
