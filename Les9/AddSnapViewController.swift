@@ -24,7 +24,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     var imagePicker = UIImagePickerController()   //20th
     
-    
+    var uuid = NSUUID().uuidString   //85
     
     
     
@@ -78,7 +78,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         
         
-        imagesFolder.child("\( NSUUID().uuidString).jpg").putData(imageData, metadata: nil) { (metadata, error) in   //34th      nsuuid uuidstring gives back a new string
+        imagesFolder.child("\(uuid).jpg").putData(imageData, metadata: nil) { (metadata, error) in   //34th      nsuuid uuidstring gives back a new string
             print("We tried to upload")
             if error != nil {
                 print("We had an error.  \(error)")
@@ -99,6 +99,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         let nextVC = segue.destination as! SelectUserViewController   //58
         nextVC.imageURL = sender as! String   //60
         nextVC.descrip = descriptionField.text!
+        nextVC.uuid = uuid   //86
         
     }
     

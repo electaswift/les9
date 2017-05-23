@@ -23,6 +23,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     var imageURL = ""   //56
     var descrip = ""   //57
+    var uuid = ""   //87
     
     
     
@@ -80,7 +81,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {    //53
         let user = users[indexPath.row]  //54
         
-        let snap = ["from":Auth.auth().currentUser?.email!, "description":descrip, "imageURL":imageURL]               //went from 54 but changed bs descriptions to 61
+        let snap = ["from":Auth.auth().currentUser?.email!, "description":descrip, "imageURL":imageURL, "uuid":uuid]               //went from 54 but changed bs descriptions to 61  and then 88
         
         Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)                //55
         

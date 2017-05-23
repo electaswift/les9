@@ -11,6 +11,7 @@ import SDWebImage
 import Firebase //81
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage //89
 
 
 
@@ -39,13 +40,15 @@ class SelectSnapViewController: UIViewController {     //69 this was made 69th
     
     override func viewWillDisappear(_ animated: Bool) {   //80
         Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").child(snap.key).removeValue()   //82, 84
+    
+    
+    Storage.storage().reference().child("images").child("\(snap.uuid).jpg").delete { (error) in
+        
+        } //90
+    
+    
+    
     }
-    
-    
-    
-    
-    
-    
     
 }
 
