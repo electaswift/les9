@@ -69,11 +69,13 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "selectSnap" {          //cause this vc has two segues
         let nextVC = segue.destination as! SelectSnapViewController   //76th
         nextVC.snap = sender as! Snap        
     }
     
-    
+    }
     
     @IBAction func logOutTapped(_ sender: Any) {   //  11th
         

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class SelectSnapViewController: UIViewController {     //69 this was made 69th
 
@@ -24,6 +26,10 @@ class SelectSnapViewController: UIViewController {     //69 this was made 69th
         super.viewDidLoad()
 
         label.text = snap.descrip   //77th
+        
+    imageView.sd_setImage(with: URL(string: snap.imageURL))      //79th
+        
+          imageView.backgroundColor = UIColor.clear  //79th actuall not necessary caause it fills up
     }
 
 
@@ -36,3 +42,8 @@ class SelectSnapViewController: UIViewController {     //69 this was made 69th
     
 
 }
+
+
+
+
+//78 to get the image from imageURL, go to cocoapods.org, get SDWebImage.  go to podfile. enter pod 'SDWebImage'. go back to terminal and pod install
