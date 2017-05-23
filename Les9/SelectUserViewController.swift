@@ -40,11 +40,11 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
             user.email = (snapshot.value as! NSDictionary)["email"] as! String
             
             
-         
+            
             
             
             user.uid = snapshot.key
-        
+            
             self.users.append(user)
             
             self.tableView.reloadData()
@@ -78,14 +78,14 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {    //53
-         let user = users[indexPath.row]  //54
+        let user = users[indexPath.row]  //54
         
         let snap = ["from":Auth.auth().currentUser?.email!, "description":descrip, "imageURL":imageURL]               //went from 54 but changed bs descriptions to 61
         
         Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)                //55
         
         
-        navigationController!.popToRootViewController(animated: true)   //78th this one pops back to the root. the other one only goes back one. 
+        navigationController!.popToRootViewController(animated: true)   //78th this one pops back to the root. the other one only goes back one.
     }
     
     

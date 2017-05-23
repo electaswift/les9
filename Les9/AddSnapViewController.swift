@@ -74,7 +74,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let imageData = UIImageJPEGRepresentation((imageView.image!), 0.1)!                    //35th  UIImagePNGRepresentation(imageView.image!)
         
-       
+        
         
         
         
